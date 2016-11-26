@@ -1,0 +1,11 @@
+def Seqsearch(List,elem):
+	pos=0
+	Found=False
+	while pos<len(List) and not Found:
+		if List[pos]==elem:
+			Found=True
+		else:
+			pos=pos+1
+	return Found
+a=[1,2,3]	
+print(Seqsearch(a,3))
