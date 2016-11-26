@@ -1,0 +1,35 @@
+class deque:
+	def __init__(self):
+		self.items=[]
+	def isempty(self):
+		return self.items==[]
+	def addrear(self,item):
+		self.items.append(item)
+	def addfront(self,item):
+		self.items.insert(0,item)
+	def size(self):
+		return len(self.items)
+	def removefront(self):
+		return self.items.pop(0)
+	def removeback(self):
+		return self.items.pop()
+
+def pali(str):
+	
+	d=deque()
+	for a in str:
+		d.addrear(a)
+	
+	isequi=True
+	
+	while d.size()>1 and isequi:
+	
+		first=d.removefront()
+	
+		rear=d.removeback()
+	
+		if first!=rear:
+			isequi=False
+		return isequi
+	
+print(pali("asdaf"))
