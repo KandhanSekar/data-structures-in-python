@@ -1,0 +1,12 @@
+list=[1,4,5,2,6]
+for selectpos in range(len(list)-1,0,-1):
+	position=0
+	for pos in range(0,selectpos):
+		if list[pos]>list[position]:
+			position=pos
+	
+	temp=list[position]
+	list[position]=list[pos]
+	list[pos]=temp
+	
+print(list)
